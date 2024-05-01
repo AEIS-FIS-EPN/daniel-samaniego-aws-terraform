@@ -28,36 +28,32 @@ Getting Started
 
     `terraform init`
 
-Validation
-----------
+Deployment
+---------------
 
-Validate your Terraform configuration before applying any changes:
+Once you configured your AWS credentials and moved to the same directory as main.tf, use the next commands in order:
 
+terraform init
 
-`terraform validate`
+This command initializes the working directory and downloads the Terraform providers specified in the configuration file.
 
-Plan
-----
+terraform validate
 
-Generate and review an execution plan:
+This command checks the syntax of the Terraform code in the working directory and checks for errors.
 
+terraform plan
 
-`terraform plan`
+This command creates an execution plan that shows the changes Terraform will make to the infrastructure.
 
-Execution
----------
+terraform apply
 
-Apply the configured changes:
+This command applies the changes defined in the execution plan and creates or modifies infrastructure resources as needed.
 
+terraform destroy
 
-`terraform apply`
+This command destroys what was created.
 
-Terraform will execute the specified commands or scripts using the `aws` provisioner.
+License
+---------------
 
-Destroy
--------
-
-To clean up and destroy any resources created by Terraform, run:
-
-
-`terraform destroy`
+MIT
